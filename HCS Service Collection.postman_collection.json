@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "a6417d15-94ee-41a3-8ed0-73f656531bf3",
+		"name": "HCS Service Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4547593"
+	},
+	"item": [
+		{
+			"name": "Get All Users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI5Y2JhYzY1NS1jZDA4LTQ5ZDktOWM3My1mOWFkYTVmYWM1Y2IiLCJpYXQiOjE2NzkyNDEzNDIsIlVzZXJJZCI6ImMxYzkzYTgzLTljN2YtNDMyMC1iOTZiLTEzM2VmNDAxOTkwZCIsIkZ1bGxOYW1lIjoiU3JlZW1vbnRhIEJob3dtaWsiLCJVc2VyTmFtZSI6InNyZWUiLCJFbWFpbCI6InNiaG93bWlrY3NlMDhAZ21haWwuY29tIiwibmJmIjoxNjc5MjQxMzQyLCJleHAiOjE2NzkyNzczNDJ9.sVmtAj58l3iiIHm4BkOg0ZOcZ9NVEigmoZuQ6t1I2Tc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7101/api/User/getAllUsers?pageNumber=1&pageSize=5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7101",
+					"path": [
+						"api",
+						"User",
+						"getAllUsers"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"UserName\":\"rohine\",\r\n    \"Password\": \"routine\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7101/api/User/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7101",
+					"path": [
+						"api",
+						"User",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save  User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJhOTc0Yjk5ZS01ZTM4LTQwZWEtYTY3YS0wYjMwZTQ1ZmE4MmUiLCJpYXQiOjE2NzkxODUxNTEsIlVzZXJJZCI6ImEzMDcwYTU1LTljNDUtNGVmOC1hMGI3LWYwOWRjYjcyZDZkOSIsIkZ1bGxOYW1lIjoiU3JlZW1vbnRhIEJob3dtaWsiLCJVc2VyTmFtZSI6InNyZWUiLCJFbWFpbCI6InNiaG93bWlrY3NlMDhAZ21haWwuY29tIiwibmJmIjoxNjc5MTg1MTUxLCJleHAiOjE2NzkyMjExNTF9.OjRDG_B6XPTTj1-Z0Ovx_dURTBbSVrGfXC96eZydNFQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ActionName\":\"Save\",\r\n    \"Id\": \"\",\r\n    \"FullName\":\"Anannya Rohine\",\r\n    \"UserName\": \"rohine\",\r\n    \"Password\": \"routine\",\r\n    \"Email\": \"rohine2008@gmail.com\",\r\n    \"UserRole\":\"User\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7101/api/User/registerUser",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7101",
+					"path": [
+						"api",
+						"User",
+						"registerUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJhOTc0Yjk5ZS01ZTM4LTQwZWEtYTY3YS0wYjMwZTQ1ZmE4MmUiLCJpYXQiOjE2NzkxODUxNTEsIlVzZXJJZCI6ImEzMDcwYTU1LTljNDUtNGVmOC1hMGI3LWYwOWRjYjcyZDZkOSIsIkZ1bGxOYW1lIjoiU3JlZW1vbnRhIEJob3dtaWsiLCJVc2VyTmFtZSI6InNyZWUiLCJFbWFpbCI6InNiaG93bWlrY3NlMDhAZ21haWwuY29tIiwibmJmIjoxNjc5MTg1MTUxLCJleHAiOjE2NzkyMjExNTF9.OjRDG_B6XPTTj1-Z0Ovx_dURTBbSVrGfXC96eZydNFQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ActionName\":\"Update\",\r\n    \"Id\": \"79EA513B-D3BD-4D42-B6A3-0EAC27A2CCAD\",\r\n    \"FullName\":\"Anannya Rohine\",\r\n    \"UserName\": \"rohine\",\r\n    \"Password\": \"routine\",\r\n    \"Email\": \"rohine2009@gmail.com\",\r\n    \"UserRole\":\"User\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7101/api/User/registerUser",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7101",
+					"path": [
+						"api",
+						"User",
+						"registerUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJkNTFiNzJiYi0wM2U0LTRmNDAtOWY4Yi1kMDFkOGVjNzkxYWIiLCJpYXQiOjE2NzkyNDcwNzIsIlVzZXJJZCI6ImMxYzkzYTgzLTljN2YtNDMyMC1iOTZiLTEzM2VmNDAxOTkwZCIsIkZ1bGxOYW1lIjoiU3JlZW1vbnRhIEJob3dtaWsiLCJVc2VyTmFtZSI6InNyZWUiLCJFbWFpbCI6InNiaG93bWlrY3NlMDhAZ21haWwuY29tIiwibmJmIjoxNjc5MjQ3MDcyLCJleHAiOjE2NzkyODMwNzJ9.yzIDoSin1a_po3C3wnVRHpsefvGMuWqcpwgvc49C0k0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7101/api/User/deleteUser?id=7ad6b2ce-ac03-4cd5-8182-0dcb546c0081",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7101",
+					"path": [
+						"api",
+						"User",
+						"deleteUser"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "7ad6b2ce-ac03-4cd5-8182-0dcb546c0081"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get  User By Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKV1RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJhOTc0Yjk5ZS01ZTM4LTQwZWEtYTY3YS0wYjMwZTQ1ZmE4MmUiLCJpYXQiOjE2NzkxODUxNTEsIlVzZXJJZCI6ImEzMDcwYTU1LTljNDUtNGVmOC1hMGI3LWYwOWRjYjcyZDZkOSIsIkZ1bGxOYW1lIjoiU3JlZW1vbnRhIEJob3dtaWsiLCJVc2VyTmFtZSI6InNyZWUiLCJFbWFpbCI6InNiaG93bWlrY3NlMDhAZ21haWwuY29tIiwibmJmIjoxNjc5MTg1MTUxLCJleHAiOjE2NzkyMjExNTF9.OjRDG_B6XPTTj1-Z0Ovx_dURTBbSVrGfXC96eZydNFQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7101/api/User/getUserbyId?id=83d321a1-e5e1-4f7c-9ede-7382b1ec2917",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7101",
+					"path": [
+						"api",
+						"User",
+						"getUserbyId"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "83d321a1-e5e1-4f7c-9ede-7382b1ec2917"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
